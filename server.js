@@ -12,5 +12,5 @@ app.post("/chat", aiChat);
 
 
 app.listen(port, () => {
-  console.log("Running");
+  console.log("Running ", port);
 });
