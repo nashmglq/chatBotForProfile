@@ -5,9 +5,11 @@ const data = process.env.DATA;
 
 const aiChat = async (req, res) => {
   const { userMessage, listMessage } = req.body;
+  console.log(userMessage, listMessage)
   if (!userMessage) return res.status(400).json({ error: "No user message" });
 
   const isNew = !listMessage || listMessage.length === 0;
+  console.log(listMessage)
 
 const prompt = `
 You are Gemi Neutron — a smart, friendly chatbot representing Nash Maglaqui, powered by Google's Gemini AI.
